@@ -19,7 +19,7 @@ module RedmineSpentTimeRequired
           allowed_statuses = Setting.plugin_redmine_spent_time_required['statuses'].scan(/\d+/)
           current_project = Project.find(params[:issue][:project_id])
           current_status = params[:issue][:status_id]
-          if ((!params[:time_entry].nil?) && (!Issue.find(params[:issue][:id]).children?))
+          if ((!params[:time_entry].nil?) && (!Issue.find(params[:id]).children?))
             if ((params[:time_entry][:hours] == "") && (allowed_projects.member?(current_project.to_param)) && (allowed_statuses.member?(current_status.to_s)))
               find_issue
               update_issue_from_params
