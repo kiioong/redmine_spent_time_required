@@ -23,7 +23,8 @@ Redmine::Plugin.register :redmine_spent_time_required do
   author_url 'http://github.com/juggler'
 
   settings(:default => {
-             'statuses' => '3 5'
+             'statuses' => '3,5',
+             'projects' => ''
            }, :partial => 'settings/spent_time_settings')
 
 end
