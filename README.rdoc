@@ -18,3 +18,9 @@ After setup it will automatically start to require issue spent time.
 = Author
 Max Prokopiev
 © 2011 TeamRocketScience. http://trs.io
+
+== ToDo
+
+* enable when the project loads module time tracking
+* disable when the issue is parent
+* enable to the specific tracker
